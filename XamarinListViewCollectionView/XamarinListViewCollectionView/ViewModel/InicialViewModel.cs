@@ -11,8 +11,8 @@ namespace XamarinListViewCollectionView.ViewModel
         public Command ListViewCommand { get; }
         public Command CollectionViewCommand { get; }
         public Command SwipeCollectionViewCommand { get; }
-
         public Command RefreshCollectionViewCommand { get; }
+        public Command SpanCollectionViewCommand { get; }
 
         public InicialViewModel()
         {
@@ -20,6 +20,7 @@ namespace XamarinListViewCollectionView.ViewModel
             CollectionViewCommand = new Command(ExecuteCollectionViewCommand);
             SwipeCollectionViewCommand = new Command(ExecutSwipeCollectionViewCommand);
             RefreshCollectionViewCommand = new Command(ExecutRefreshCollectionViewCommand);
+            SpanCollectionViewCommand = new Command(ExecuteSpanCollectionViewCommand);
         }
 
         private async void ExecuteListViewCommand()
@@ -39,6 +40,11 @@ namespace XamarinListViewCollectionView.ViewModel
         private async void ExecutRefreshCollectionViewCommand()
         {
             await Navigation.PushAsync<RefreshCollectionViewViewModel>(false);
+        }
+
+        private async void ExecuteSpanCollectionViewCommand()
+        {
+            await Navigation.PushAsync<SpanCollectionViewViewModel>(false);
         }
     }
 }

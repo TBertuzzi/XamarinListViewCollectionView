@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:c="clr-namespace:XamarinListViewCollectionView.Converters"
+             mc:Ignorable="d"
+             x:Class="XamarinListViewCollectionView.Views.SpanCollectionViewPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <c:ImageFromByteArrayConverter x:Key="imageFileCvt" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+
+    <ContentPage.Content>
+        <CollectionView ItemsSource="{Binding Pokemons}" 
+                        SelectionMode="Single"
+                        VerticalOptions="FillAndExpand">
+
+            <CollectionView.ItemsLayout>
+                <GridItemsLayout  Orientation="Vertical" Span="2" />
+            </CollectionView.ItemsLayout>
+
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Grid Padding="20,30" >
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="*" />
+
+                        </Grid.ColumnDefinitions>
+
+                        <Image HeightRequest="120" 
+                                   WidthRequest = "120"
+                                   Source="{Binding Image, Converter={StaticResource imageFileCvt}}"
+                                   Grid.Row="0"
+                                   Grid.Column="0"
+                                   Grid.RowSpan ="2"/>
+
+
+                        <Label Grid.Row="0" 
+                                   Grid.Column="1"
+                                     FontSize="Medium"
+                                   Text="{Binding Id,StringFormat='#{0}'}"/>
+
+                        <Label Grid.Row="1" 
+                                   Grid.Column="1"
+                                   Text="{Binding Name}"
+                                   FontSize="Large"
+                                   TextColor="#FF5525"/>
+
+
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+
+            <CollectionView.EmptyView>
+                <ContentView>
+                    <Label Text="Não tem itens para exibir"></Label>
+                </ContentView>
+            </CollectionView.EmptyView>
+        </CollectionView>
+
+
+    </ContentPage.Content>
+</ContentPage>

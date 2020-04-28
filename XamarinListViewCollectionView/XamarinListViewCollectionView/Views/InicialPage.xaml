@@ -13,7 +13,8 @@
             <Button Text="CollectionView" FontSize="Large" Command="{Binding CollectionViewCommand}"/>
             <Button Text="SwipeCollectionView" FontSize="Large" Command="{Binding SwipeCollectionViewCommand}"/>
             <Button Text="RefreshCollectionView" FontSize="Large" Command="{Binding RefreshCollectionViewCommand}"/>
-
+            <Button Text="SpanCollectionView" FontSize="Large" Command="{Binding SpanCollectionViewCommand}"/>
+            
         </StackLayout>
 
     </ContentPage.Content>
