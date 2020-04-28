@@ -18,3 +18,5 @@ Para ajudar a realizar as implementações criei esse Repositorio com um Aplicat
 * [RefreshCollectionViewPage.xaml](https://github.com/TBertuzzi/XamarinListViewCollectionView/blob/master/XamarinListViewCollectionView/XamarinListViewCollectionView/Views/RefreshCollectionViewPage.xaml) : Como Implementar a RefreshView para exibir o cursor de Espera na ListView.
 
 * [SwipeCollectionViewPag.xaml](https://github.com/TBertuzzi/XamarinListViewCollectionView/blob/master/XamarinListViewCollectionView/XamarinListViewCollectionView/Views/SwipeCollectionViewPage.xaml) : Como Implementar a SwipeView para Submenus na CollectionView.
+
+# 🚧 Em Construção
