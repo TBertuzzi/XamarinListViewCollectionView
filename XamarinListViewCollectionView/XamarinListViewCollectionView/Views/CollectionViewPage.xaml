@@ -15,7 +15,12 @@
     
     <ContentPage.Content>
         <CollectionView ItemsSource="{Binding Pokemons}" 
+                        SelectionMode="Single"
                         VerticalOptions="FillAndExpand">
+
+            <CollectionView.ItemsLayout>
+                <LinearItemsLayout Orientation="Vertical" />
+            </CollectionView.ItemsLayout>
 
             <CollectionView.ItemTemplate>
                 <DataTemplate>

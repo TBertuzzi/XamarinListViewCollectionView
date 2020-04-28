@@ -58,11 +58,6 @@
                 </DataTemplate>
             </CollectionView.ItemTemplate>
 
-            <CollectionView.EmptyView>
-                <ContentView>
-                    <Label Text="Não tem itens para exibir"></Label>
-                </ContentView>
-            </CollectionView.EmptyView>
         </CollectionView>
 
         </RefreshView>
